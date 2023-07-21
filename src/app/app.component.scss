@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Montserrat";
+}
+
+mat-drawer {
+  width: 12rem;
+  background-color: #0f172a;
+}
+
+mat-drawer-container {
+  height: 100%;
+}

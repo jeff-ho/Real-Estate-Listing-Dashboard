@@ -1,1 +1,22 @@
-<p>sidenav works!</p>
+<mat-nav-list>
+  <div class="logo">
+    <img src="../../assets/logo.jpeg" alt="Company Logo" />
+  </div>
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader class="mt-2 subheader">Links</h2>
+  <div class="nav-links-container">
+    <a class="nav-link" routerLink="/home" routerLinkActive="list-item-active">
+      <mat-icon>home</mat-icon>
+      <p>Home</p>
+    </a>
+    <a
+      class="nav-link"
+      routerLink="/dashboard"
+      routerLinkActive="list-item-active"
+    >
+      <mat-icon>dashboard</mat-icon>
+      <p>Dashboard</p>
+    </a>
+  </div>
+</mat-nav-list>
