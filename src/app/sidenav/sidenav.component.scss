@@ -1,5 +1,8 @@
+.nav-links-container {
+  padding: 0.5rem;
+}
+
 .logo {
-  // text-align: center;
   padding: 2.6rem 1rem;
   img {
     width: 100%;
@@ -8,8 +11,14 @@
   }
 }
 
-.nav-links-container {
-  padding: 0.5rem;
+mat-divider {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.nav-links-container,
+.subheader {
+  color: rgb(225, 224, 224);
 }
 
 .nav-link {
@@ -19,7 +28,7 @@
   margin: 0;
   padding: 0.8rem;
 
-  mat-icon {
+  .icon {
     margin-right: 0.5rem;
   }
 
@@ -28,24 +37,16 @@
     border-radius: 3px;
   }
 
+  &:active {
+    background-color: #1f2127;
+    border-radius: 3px;
+  }
+
   p {
     margin-bottom: 0;
   }
 }
 
-mat-divider {
-  margin-bottom: 1.5rem;
-}
-
-.nav-links-container,
-.subheader {
-  color: rgb(225, 224, 224);
-}
-
 .subheader {
   font-size: 1rem;
-}
-
-mat-icon {
-  height: 100%;
 }
