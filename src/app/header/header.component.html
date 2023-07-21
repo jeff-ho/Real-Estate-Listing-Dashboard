@@ -2,27 +2,24 @@
   <button mat-icon-button (click)="toggleSidebar()">
     <mat-icon>menu</mat-icon>
   </button>
-  <div class="row mr-2 ml-auto">
-    <ul>
-      <li>
-        <button
-          mat-button
-          [matMenuTriggerFor]="menu"
-          class="user mt-2 d-flex align-items-center"
-        >
-          <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
-          <span>John Smith</span>
-          <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+  <div class="row mr-2 ml-auto user">
+    <button
+      mat-button
+      [matMenuTriggerFor]="menu"
+      class="user mt-2 d-flex align-items-center"
+    >
+      <img src="../../assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+      <span>John Smith</span>
+      <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+    </button>
+
+    <div class="drop-down-container">
+      <mat-menu #menu="matMenu" class="mat-menu">
+        <button mat-menu-item class="mat-menu-item">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
         </button>
-        <div class="drop-down-container">
-          <mat-menu #menu="matMenu" yPosition="below" class="mat-menu">
-            <button mat-menu-item class="mat-menu-item">
-              <mat-icon>exit_to_app</mat-icon>
-              <span>Logout</span>
-            </button>
-          </mat-menu>
-        </div>
-      </li>
-    </ul>
+      </mat-menu>
+    </div>
   </div>
 </mat-toolbar>
