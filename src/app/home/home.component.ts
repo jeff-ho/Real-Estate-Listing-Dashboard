@@ -12,9 +12,9 @@ export class HomeComponent {
     description: new FormControl('', Validators.required),
     agentName: new FormControl('', Validators.required),
     address: new FormControl('', Validators.required),
-    bedrooms: new FormControl(1),
-    washrooms: new FormControl(1),
-    price: new FormControl(0),
+    bedrooms: new FormControl('', Validators.required),
+    washrooms: new FormControl('', Validators.required),
+    price: new FormControl('', Validators.required),
   });
 
   onSubmit() {

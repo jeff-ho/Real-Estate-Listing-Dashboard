@@ -1,9 +1,10 @@
-export interface Listing {
-  title: string;
-  description: string;
-  agentName: string;
-  address: string;
-  bedrooms: number;
-  washrooms: number;
-  price: number;
+export class Listing {
+  Id: number;
+  Title: string;
+  Description: string;
+  AgentName: string;
+  Address: string;
+  Bedrooms: number;
+  Bathrooms: number;
+  Price: number;
 }

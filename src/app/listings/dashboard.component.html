@@ -1,1 +1,32 @@
-<p>Listings are here</p>
+<table mat-table [dataSource]="listings" class="listings-table">
+  <ng-container matColumnDef="Title" class="">
+    <th mat-header-cell *matHeaderCellDef>Listing Title</th>
+    <td mat-cell *matCellDef="let element">{{ element.Title }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Description">
+    <th mat-header-cell *matHeaderCellDef>Listing Description</th>
+    <td mat-cell *matCellDef="let element">{{ element.Description }}</td>
+  </ng-container>
+  <ng-container matColumnDef="AgentName">
+    <th mat-header-cell *matHeaderCellDef>Listing Agent</th>
+    <td mat-cell *matCellDef="let element">{{ element.AgentName }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Address">
+    <th mat-header-cell *matHeaderCellDef>Listing Address</th>
+    <td mat-cell *matCellDef="let element">{{ element.Address }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Number of Bedrooms">
+    <th mat-header-cell *matHeaderCellDef>Number of Bedrooms</th>
+    <td mat-cell *matCellDef="let element">{{ element.Bedrooms }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Number of Bathrooms">
+    <th mat-header-cell *matHeaderCellDef>Number of Bathrooms</th>
+    <td mat-cell *matCellDef="let element">{{ element.Bathrooms }}</td>
+  </ng-container>
+  <ng-container matColumnDef="Price">
+    <th mat-header-cell *matHeaderCellDef>Price</th>
+    <td mat-cell *matCellDef="let element">{{ element.Price }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
