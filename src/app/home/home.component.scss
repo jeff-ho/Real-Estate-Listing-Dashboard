@@ -1,0 +1,13 @@
+.form-header {
+  margin: 2rem 0 0 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0 0 3rem;
+}
+
+form mat-form-field {
+  max-width: 15rem;
+}
