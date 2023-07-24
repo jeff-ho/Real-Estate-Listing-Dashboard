@@ -22,7 +22,9 @@ export class DashboardComponent {
   constructor(private listingsService: ListingService) {}
 
   ngOnInit(): void {
-    this.listings = this.listingsService.getListings();
-    // console.log(this.listings);
+    this.listingsService.getListings().subscribe((result: Listing[]) => {
+      this.listings = result;
+      console.log(this.listings);
+    });
   }
 }

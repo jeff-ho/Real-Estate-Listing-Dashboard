@@ -1,22 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Listing } from '../models/listing';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment.development';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ListingService {
-  constructor() {}
+  private url = 'RealEstateListings';
+  constructor(private http: HttpClient) {}
 
-  public getListings(): Listing[] {
-    let listing = new Listing();
-    listing.Title = 'Nice House';
-    listing.Description = 'Really nice house';
-    listing.AgentName = 'John Smith';
-    listing.Address = '123 Fake Street';
-    listing.Bedrooms = 2;
-    listing.Bathrooms = 2;
-    listing.Price = 2;
-
-    return [listing];
+  public getListings(): Observable<Listing[]> {
+    return this.http.get<Listing[]>(`${environment.apiURL}/${this.url}`);
   }
 }
