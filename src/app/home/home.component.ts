@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Listing } from '../models/listing';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +8,10 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class HomeComponent {
   listing = new FormGroup({
-    title: new FormControl(''),
-    description: new FormControl(''),
-    agentName: new FormControl(''),
-    address: new FormControl(''),
+    title: new FormControl('', Validators.required),
+    description: new FormControl('', Validators.required),
+    agentName: new FormControl('', Validators.required),
+    address: new FormControl('', Validators.required),
     bedrooms: new FormControl(1),
     washrooms: new FormControl(1),
     price: new FormControl(0),

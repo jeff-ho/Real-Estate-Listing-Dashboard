@@ -1,13 +1,32 @@
-.form-header {
-  margin: 2rem 0 0 2rem;
-}
-
 form {
   display: flex;
   flex-direction: column;
-  padding: 3rem 0 0 3rem;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 form mat-form-field {
-  max-width: 15rem;
+  width: 25rem;
+}
+
+mat-card {
+  margin: 4rem 2rem 0 2rem;
+  padding: 0 0 2rem 0;
+
+  mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+
+.listing-submit-button {
+  width: 5rem;
+}
+
+@media screen and (max-width: 685px) {
+  form mat-form-field {
+    width: 12rem;
+  }
 }
