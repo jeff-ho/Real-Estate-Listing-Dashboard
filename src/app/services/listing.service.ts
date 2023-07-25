@@ -8,10 +8,14 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root',
 })
 export class ListingService {
-  private url = 'RealEstateListings';
+  private url = 'PropertyListings';
   constructor(private http: HttpClient) {}
 
-  public getListings(): Observable<Listing[]> {
+  getListings(): Observable<Listing[]> {
     return this.http.get<Listing[]>(`${environment.apiURL}/${this.url}`);
+  }
+
+  public postListing(data: object): Observable<Listing[]> {
+    return this.http.post<Listing[]>(`${environment.apiURL}/${this.url}`, data);
   }
 }
