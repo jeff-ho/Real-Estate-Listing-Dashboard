@@ -26,6 +26,5 @@ export class HomeComponent {
     this.listingsService.postListing(formValues).subscribe((data) => {
       console.log(data);
     });
-    console.log(formValues);
   }
 }

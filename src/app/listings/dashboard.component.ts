@@ -17,14 +17,29 @@ export class DashboardComponent {
     'Number of Bedrooms',
     'Number of Bathrooms',
     'Price',
+    'ListingOptions',
   ];
 
   constructor(private listingsService: ListingService) {}
 
   ngOnInit(): void {
+    this.fetchData();
+  }
+
+  fetchData() {
     this.listingsService.getListings().subscribe((result: Listing[]) => {
       this.listings = result;
       console.log(this.listings);
     });
+  }
+
+  handleDeleteListing(id: number): void {
+    this.listingsService.deleteListing(id).subscribe((result: Listing[]) => {
+      this.fetchData();
+    });
+  }
+
+  handleEditListing(id: number): void {
+    console.log('Edit');
   }
 }
