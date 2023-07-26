@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ListingService } from '../services/listing.service';
-import { Listing } from '../models/listing';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,12 +19,16 @@ export class HomeComponent {
     price: new FormControl('', Validators.required),
   });
 
-  constructor(private listingsService: ListingService) {}
+  constructor(
+    private listingsService: ListingService,
+    private router: Router
+  ) {}
 
   onSubmit() {
     const formValues = this.listing.value;
     this.listingsService.postListing(formValues).subscribe((data) => {
       console.log(data);
+      this.router.navigate(['/listings']);
     });
   }
 }

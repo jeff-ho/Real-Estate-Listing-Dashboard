@@ -45,10 +45,12 @@
           <mat-icon>delete</mat-icon>
           <span>Delete</span>
         </button>
-        <button mat-menu-item (click)="handleEditListing(element.id)">
-          <mat-icon>edit</mat-icon>
-          <span>Edit</span>
-        </button>
+        <mat-dialog-actions>
+          <button mat-menu-item (click)="openDialog(element)">
+            <mat-icon>edit</mat-icon>
+            <span>Edit</span>
+          </button>
+        </mat-dialog-actions>
       </mat-menu>
     </td>
   </ng-container>

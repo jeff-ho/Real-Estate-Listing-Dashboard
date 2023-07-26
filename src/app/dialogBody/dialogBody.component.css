@@ -1,0 +1,22 @@
+.modal {
+  padding: 1rem 2rem 2rem 1rem;
+}
+
+.edit-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edit-form-header {
+  margin-bottom: 2rem;
+}
+
+.edit-form-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-form-button {
+  width: 10rem;
+}

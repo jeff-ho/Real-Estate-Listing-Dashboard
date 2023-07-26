@@ -21,6 +21,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogBodyComponent } from './dialogBody/dialogBody.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     SidenavComponent,
     HomeComponent,
     DashboardComponent,
+    DialogBodyComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatCardModule,
     MatTableModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

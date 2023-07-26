@@ -24,4 +24,11 @@ export class ListingService {
       `${environment.apiURL}/${this.url}/${id}`
     );
   }
+
+  editListing(id: number, data: object): Observable<Listing[]> {
+    return this.http.put<Listing[]>(
+      `${environment.apiURL}/${this.url}/${id}`,
+      data
+    );
+  }
 }
