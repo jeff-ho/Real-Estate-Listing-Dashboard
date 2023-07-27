@@ -15,6 +15,17 @@
         />
       </mat-form-field>
       <mat-form-field>
+        <mat-label for="listing-size">Listing Size</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="size"
+          class="listing-size"
+          name="size"
+        />
+        <span matTextSuffix>SqFt</span>
+      </mat-form-field>
+      <mat-form-field>
         <mat-label for="listing-description">Listing Description</mat-label>
         <textarea
           type="text"
@@ -79,6 +90,16 @@
         <span matTextPrefix>$&nbsp;</span>
         <span matTextSuffix>.00</span>
       </mat-form-field>
+
+      <!-- Image input -->
+      <!-- <input
+        formControlName="image"
+        type="file"
+        class="listing-image-upload"
+        name="images"
+        placeholder="1"
+      /> -->
+
       <button class="listing-submit-button" mat-raised-button type="submit">
         Submit
       </button>

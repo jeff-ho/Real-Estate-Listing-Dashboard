@@ -26,6 +26,7 @@ export class ListingService {
   }
 
   editListing(id: number, data: object): Observable<Listing[]> {
+    console.log(id, data);
     return this.http.put<Listing[]>(
       `${environment.apiURL}/${this.url}/${id}`,
       data

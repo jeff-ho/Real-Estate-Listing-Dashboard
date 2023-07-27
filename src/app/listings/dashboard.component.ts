@@ -13,6 +13,7 @@ export class DashboardComponent {
   listings: Listing[] = [];
   displayedColumns: string[] = [
     'Title',
+    'Size',
     'Description',
     'AgentName',
     'Address',

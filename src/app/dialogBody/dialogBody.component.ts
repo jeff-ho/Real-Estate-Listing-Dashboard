@@ -18,6 +18,7 @@ export class DialogBodyComponent implements OnInit {
 
   listing = new FormGroup({
     title: new FormControl(this.data.title, Validators.required),
+    size: new FormControl(this.data.size, Validators.required),
     description: new FormControl(this.data.description, Validators.required),
     agentName: new FormControl(this.data.agentName, Validators.required),
     address: new FormControl(this.data.address, Validators.required),

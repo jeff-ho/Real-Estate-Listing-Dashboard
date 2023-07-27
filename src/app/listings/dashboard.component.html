@@ -4,6 +4,10 @@
     <th mat-header-cell *matHeaderCellDef>Listing Title</th>
     <td mat-cell *matCellDef="let element">{{ element.title }}</td>
   </ng-container>
+  <ng-container matColumnDef="Size" class="">
+    <th mat-header-cell *matHeaderCellDef>Property Size (SqFt)</th>
+    <td mat-cell *matCellDef="let element">{{ element.size }}</td>
+  </ng-container>
   <ng-container matColumnDef="Description">
     <th mat-header-cell *matHeaderCellDef>Listing Description</th>
     <td mat-cell *matCellDef="let element">{{ element.description }}</td>

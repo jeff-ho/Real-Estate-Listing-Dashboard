@@ -11,12 +11,14 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   listing = new FormGroup({
     title: new FormControl('', Validators.required),
+    size: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     agentName: new FormControl('', Validators.required),
     address: new FormControl('', Validators.required),
     bedrooms: new FormControl('', Validators.required),
     washrooms: new FormControl('', Validators.required),
     price: new FormControl('', Validators.required),
+    // image: new FormControl('', Validators.required),
   });
 
   constructor(
@@ -24,8 +26,11 @@ export class HomeComponent {
     private router: Router
   ) {}
 
+  image: any;
+
   onSubmit() {
     const formValues = this.listing.value;
+
     this.listingsService.postListing(formValues).subscribe((data) => {
       console.log(data);
       this.router.navigate(['/listings']);

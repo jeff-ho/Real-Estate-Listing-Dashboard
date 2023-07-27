@@ -19,6 +19,17 @@
         />
       </mat-form-field>
       <mat-form-field>
+        <mat-label for="listing-title">Property Size</mat-label>
+        <input
+          type="number"
+          matInput
+          formControlName="size"
+          class="listing-size"
+          name="size"
+        />
+        <span matTextSuffix>SqFt</span>
+      </mat-form-field>
+      <mat-form-field>
         <mat-label for="listing-description">Listing Description</mat-label>
         <textarea
           type="text"
