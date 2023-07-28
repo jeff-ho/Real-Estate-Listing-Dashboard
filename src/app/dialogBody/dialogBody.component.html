@@ -1,112 +1,116 @@
-<mat-card class="modal">
-  <mat-card-header>
-    <h1 class="edit-form-header">Edit listing</h1>
-  </mat-card-header>
-  <mat-card-content class="edit-form-container">
-    <form
-      [formGroup]="listing"
-      (ngSubmit)="onSubmit()"
-      class="edit-form-container"
-    >
-      <mat-form-field>
-        <mat-label for="listing-title">Listing Title</mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="title"
-          class="listing-title"
-          name="title"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="listing-title">Property Size</mat-label>
-        <input
-          type="number"
-          matInput
-          formControlName="size"
-          class="listing-size"
-          name="size"
-        />
-        <span matTextSuffix>SqFt</span>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="listing-description">Listing Description</mat-label>
-        <textarea
-          type="text"
-          matInput
-          formControlName="description"
-          class="listing-description"
-          name="description"
-        ></textarea>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="listing-agent">Agent Name</mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="agentName"
-          class="listing-agent"
-          name="agentName"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="listing-address"> Listing Address </mat-label>
-        <input
-          type="text"
-          matInput
-          formControlName="address"
-          class="listing-address"
-          name="address"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="listing-bedroom-number">Number of bedrooms</mat-label>
-        <input
-          matInput
-          formControlName="bedrooms"
-          type="number"
-          class="listing-bedroom-number"
-          name="bedrooms"
-          placeholder="1"
-        />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="listing-washroom-number">Number of washrooms</mat-label>
-        <input
-          matInput
-          formControlName="washrooms"
-          type="number"
-          class="listing-washroom-number"
-          name="washrooms"
-          placeholder="1"
-        />
-      </mat-form-field>
-      <mat-form-field floatLabel="always">
-        <mat-label for="listing-price"> Listing price </mat-label>
-        <input
-          matInput
-          formControlName="price"
-          type="number"
-          class="listing-price"
-          name="price"
-          placeholder="0"
-        />
-        <span matTextPrefix>$&nbsp;</span>
-        <span matTextSuffix>.00</span>
-      </mat-form-field>
-      <div class="edit-form-button-container">
-        <button class="edit-form-button" mat-raised-button type="submit">
-          Submit
-        </button>
-        <button
-          class="edit-form-button"
-          mat-raised-button
-          color="warn"
-          mat-dialog-close
-        >
-          Cancel
-        </button>
-      </div>
-    </form>
-  </mat-card-content>
-</mat-card>
+<mat-dialog-content>
+  <mat-card class="modal">
+    <mat-card-header>
+      <h1 class="edit-form-header">Edit listing</h1>
+    </mat-card-header>
+    <mat-card-content class="edit-form-container">
+      <form
+        [formGroup]="listing"
+        (ngSubmit)="onSubmit()"
+        class="edit-form-container"
+      >
+        <mat-form-field>
+          <mat-label for="listing-title">Listing Title</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="title"
+            class="listing-title"
+            name="title"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="listing-title">Property Size</mat-label>
+          <input
+            type="number"
+            matInput
+            formControlName="size"
+            class="listing-size"
+            name="size"
+          />
+          <span matTextSuffix>SqFt</span>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="listing-description">Listing Description</mat-label>
+          <textarea
+            type="text"
+            matInput
+            formControlName="description"
+            class="listing-description"
+            name="description"
+          ></textarea>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="listing-agent">Agent Name</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="agentName"
+            class="listing-agent"
+            name="agentName"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="listing-address"> Listing Address </mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="address"
+            class="listing-address"
+            name="address"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="listing-bedroom-number">Number of bedrooms</mat-label>
+          <input
+            matInput
+            formControlName="bedrooms"
+            type="number"
+            class="listing-bedroom-number"
+            name="bedrooms"
+            placeholder="1"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="listing-washroom-number"
+            >Number of washrooms</mat-label
+          >
+          <input
+            matInput
+            formControlName="washrooms"
+            type="number"
+            class="listing-washroom-number"
+            name="washrooms"
+            placeholder="1"
+          />
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+          <mat-label for="listing-price"> Listing price </mat-label>
+          <input
+            matInput
+            formControlName="price"
+            type="number"
+            class="listing-price"
+            name="price"
+            placeholder="0"
+          />
+          <span matTextPrefix>$&nbsp;</span>
+          <span matTextSuffix>.00</span>
+        </mat-form-field>
+        <div class="edit-form-button-container">
+          <button class="edit-form-button" mat-raised-button type="submit">
+            Submit
+          </button>
+          <button
+            class="edit-form-button"
+            mat-raised-button
+            color="warn"
+            mat-dialog-close
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>

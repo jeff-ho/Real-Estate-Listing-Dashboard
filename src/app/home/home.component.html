@@ -92,13 +92,15 @@
       </mat-form-field>
 
       <!-- Image input -->
-      <!-- <input
+      <input
         formControlName="image"
         type="file"
         class="listing-image-upload"
         name="images"
         placeholder="1"
-      /> -->
+        (change)="onFileChange($event)"
+      />
+      <img *ngIf="url" [src]="url" height="200" /><br />
 
       <button class="listing-submit-button" mat-raised-button type="submit">
         Submit
